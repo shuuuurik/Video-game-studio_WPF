@@ -1,0 +1,2 @@
+S.T.A.L.K.E.R.2, 1000, 10000000;  //Priority = 10000
+Farm_Simulator, 100, 2000000  //Priority = 20000

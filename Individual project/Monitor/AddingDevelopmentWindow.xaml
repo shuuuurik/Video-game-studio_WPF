@@ -1,0 +1,19 @@
+﻿<Window x:Class="Monitor.AddingDevelopmentWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Monitor"
+        mc:Ignorable="d"
+        Title="Добавление разработки" Height="350" Width="450">
+    <Grid>
+        <Label x:Name="todoTitleLabel" Content="Название:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,21,0,0" Height="35" Width="165" RenderTransformOrigin="0.836,0.75" FontSize="20" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="todoTitleTextBox" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Margin="216,21,0,0" FontSize="20"/>
+        <Label x:Name="todoDevelopmentComplexityLabel" Content="Сложность:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,87,0,0" Height="35" Width="165" RenderTransformOrigin="0.836,0.75" FontSize="20" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="todoDevelopmentComplexityTextBox" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="216,87,0,0" FontSize="20"/>
+        <Label x:Name="todoProfitLabel" Content="Вознаграждение" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="33,151,0,0" Height="35" Width="165" RenderTransformOrigin="0.836,0.75" FontSize="20" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="todoProfitTextBox" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="216,151,0,0" FontSize="20"/>
+        <Button x:Name="addTodoButton" Content="Добавить в очередь разработок" HorizontalAlignment="Left" VerticalAlignment="Top" Width="350" Margin="33,235,0,0" Height="35" FontSize="20" FontFamily="Segoe UI Semibold" Click="AddTodoButton_Click"/>
+
+    </Grid>
+</Window>

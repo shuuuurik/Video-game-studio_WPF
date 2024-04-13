@@ -1,0 +1,66 @@
+﻿<Window x:Class="Monitor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Monitor"
+        mc:Ignorable="d"
+        Title="Video-game Studio" Height="667.24" Width="1550" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid RenderTransformOrigin="0.977,0.612">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="395*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="budgetLabel" Content="Бюджет" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="424,28,0,0" Height="40" Width="262" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.836,0.75" FontSize="22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label x:Name="numberOfWorkersLabel" Grid.ColumnSpan="2" Content="Сотрудники" HorizontalAlignment="Left" Margin="351,100,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="200" Height="37" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="numberOfDevelopersLabel" Grid.ColumnSpan="2" Content="Разработчики" HorizontalAlignment="Left" Margin="10,158,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="170" Height="37" FontSize="20" VerticalContentAlignment="Center"/>
+        <Label x:Name="numberOfSoftwareTestersLabel" Grid.ColumnSpan="2" Content="Тестировщики" HorizontalAlignment="Left" Margin="10,213,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="170" Height="37" FontSize="20" VerticalContentAlignment="Center"/>
+        <Label x:Name="currentExpensesLabel" Content="Расход на з/п в месяц" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="804,28,0,0" Height="40" Width="400" Grid.Column="1" Grid.Row="1" RenderTransformOrigin="0.836,0.75" FontSize="22" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label x:Name="developmentProductivityLabel" Grid.ColumnSpan="2" Content="Мощность разработки" HorizontalAlignment="Left" Margin="198,158,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="280" Height="37" FontSize="20" VerticalContentAlignment="Center" RenderTransformOrigin="0.243,0.635"/>
+        <Label x:Name="testingProductivityLabel" Grid.ColumnSpan="2" Content="Мощность тестирования" HorizontalAlignment="Left" Margin="198,213,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="280" Height="37" FontSize="20" VerticalContentAlignment="Center"/>
+        <Label x:Name="currentDevelopmentExpensesLabel" Grid.ColumnSpan="2" Content="Затраты на разработку" HorizontalAlignment="Left" Margin="489,158,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="350" Height="37" FontSize="20" VerticalContentAlignment="Center"/>
+        <Label x:Name="currentTestingExpensesLabel" Grid.ColumnSpan="2" Content="Затраты на тестирование " HorizontalAlignment="Left" Margin="489,213,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="350" Height="37" FontSize="20" VerticalContentAlignment="Center"/>
+        <Label x:Name="currentTodoLabel" Grid.ColumnSpan="2" Content="Текущая разработка" HorizontalAlignment="Left" Margin="950,100,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="400" Height="37" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" RenderTransformOrigin="0.305,0.771"/>
+        <Label x:Name="developmentProgressLabel" Grid.ColumnSpan="2" Content="Прогресс разработки" HorizontalAlignment="Left" Margin="905,212,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="300" Height="37" FontSize="20" VerticalContentAlignment="Center"/>
+        <Label x:Name="testingProgressLabel" Grid.ColumnSpan="2" Content="Прогресс тестирования" HorizontalAlignment="Left" Margin="1205,212,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="300" Height="37" FontSize="20" VerticalContentAlignment="Center" RenderTransformOrigin="0.432,-0.229"/>
+        <Button x:Name="skipMonthButton" Grid.ColumnSpan="2" Content="Работать 1 месяц" HorizontalAlignment="Left" Grid.RowSpan="2" VerticalAlignment="Top" Width="250" Margin="589,366,0,0" Height="36" FontSize="20" FontFamily="Segoe UI Semibold" Click="SkipMonthButton_Click" RenderTransformOrigin="0.426,2.176"/>
+        <Button x:Name="addEmployeeButton" Content="Добавить сотрудника" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" Margin="156,454,0,0" Height="37" FontSize="20" FontFamily="Segoe UI Semibold" Click="AddEmployeeButton_Click" Grid.ColumnSpan="2" Grid.RowSpan="2" RenderTransformOrigin="1.08,-4.919"/>
+        <Button x:Name="addTodoButton" Content="Добавить новую разработку" HorizontalAlignment="Left" VerticalAlignment="Top" Width="300" Margin="1090,454,0,0" Height="37" FontSize="20" FontFamily="Segoe UI Semibold" Click="AddTodoButton_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label x:Name="currentTodoComplexityLabel" Grid.ColumnSpan="2" Content="Сложность разработки" HorizontalAlignment="Left" Margin="900,158,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="300" Height="37" FontSize="20" VerticalContentAlignment="Center" RenderTransformOrigin="0.5,2.914"/>
+        <Button x:Name="stopCurrentDevelopmentButton" Grid.ColumnSpan="2" Content="Отложить" HorizontalAlignment="Left" Grid.RowSpan="2" VerticalAlignment="Top" Width="136" Margin="1369,100,0,0" Height="37" FontSize="20" FontFamily="Segoe UI Semibold" Click="StopCurrentDevelopmentButton_Click"/>
+        <Label x:Name="currentTodoProfitLabel" Grid.ColumnSpan="2" Content="Вознаграждение" HorizontalAlignment="Left" Margin="1205,158,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="300" Height="37" FontSize="20" VerticalContentAlignment="Center"/>
+        <ListView x:Name="workersListView" HorizontalAlignment="Left" Height="168" VerticalAlignment="Top" Width="326" Margin="110,273,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" RenderTransformOrigin="0.516,0.488" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{ Binding Name }" Header="Имя" Width="150"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{ Binding Speciality }" Header="Профессия" Width="150"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="todosListView" HorizontalAlignment="Left" Height="168" VerticalAlignment="Top" Width="445" Margin="984,273,0,0" Grid.ColumnSpan="2" Grid.RowSpan="2" RenderTransformOrigin="0.516,0.488" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{ Binding Title }" Header="Название" Width="150"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{ Binding DevelopmentComplexity }" Header="Сложность" Width="80"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{ Binding Profit }" Header="Вознаграждение, руб" Width="125"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{ Binding Priority }" Header="Приоритет" Width="80"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="todoTitleTextBox" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Margin="1032,520,0,0" FontSize="20" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Label x:Name="todoTitleLabel" Grid.ColumnSpan="2" Content="Название:" HorizontalAlignment="Left" Margin="900,518,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="105" Height="37" FontSize="20" VerticalContentAlignment="Center" RenderTransformOrigin="0.39,1.392"/>
+        <Button x:Name="deleteTodoButton" Content="Удалить разработку" HorizontalAlignment="Left" VerticalAlignment="Top" Width="201" Margin="1304,520,0,0" Height="37" FontSize="20" FontFamily="Segoe UI Semibold" Click="DeleteTodoButton_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:Name="deleteEmployeeButton" Content="Удалить выбранного сотудника" HorizontalAlignment="Left" VerticalAlignment="Top" Width="326" Margin="124,517,0,0" Height="38" FontSize="20" FontFamily="Segoe UI Semibold" Click="DeleteEmployeeButton_Click" Grid.ColumnSpan="2" Grid.RowSpan="2" RenderTransformOrigin="1.08,-4.919"/>
+        <Button x:Name="startSelectedDevelopmentButton" Grid.ColumnSpan="2" Content="Начать выбранную разработку" HorizontalAlignment="Left" Grid.RowSpan="2" VerticalAlignment="Top" Width="312" Margin="1090,578,0,0" Height="38" FontSize="20" FontFamily="Segoe UI Semibold" Click="StartSelectedDevelopmentButton_Click"/>
+        <Button x:Name="recreateInstanceButton" Grid.ColumnSpan="2" Content="Начать заново" HorizontalAlignment="Left" Grid.RowSpan="2" VerticalAlignment="Top" Width="250" Margin="589,552,0,0" Height="36" FontSize="20" FontFamily="Segoe UI Semibold" RenderTransformOrigin="0.426,2.176" Click="RecreateInstanceButton_Click"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="Monitor.AddingEmployeeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Monitor"
+        mc:Ignorable="d"
+        Title="Добавление сотрудника" Height="400" Width="450">
+    <Grid>
+        <Label x:Name="workerNameLabel" Content="Имя:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,26,0,0" Height="35" Width="100" RenderTransformOrigin="0.836,0.75" FontSize="20" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="workerNameTextBox" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" Margin="221,26,0,0" FontSize="20"/>
+        <Label x:Name="workerAgeLabel" Content="Возраст:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,90,0,0" Height="35" Width="100" RenderTransformOrigin="0.836,0.75" FontSize="20" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="workerAgeTextBox" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Margin="221,90,141,0" FontSize="20"/>
+        <Label x:Name="workerExpierenceLabel" Content="Опыт:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="75,158,0,0" Height="35" Width="100" RenderTransformOrigin="0.836,0.75" FontSize="20" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="workerExpierenceTextBox" HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="221,158,0,0" FontSize="20" RenderTransformOrigin="2.018,-3.252"/>
+        <ComboBox x:Name="workerSpecialty" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="43,231,0,0" Height="35" FontSize="20" SelectedIndex="0">
+            <ComboBoxItem Content="Разработчик" FontSize="18"/>
+            <ComboBoxItem Content="Тестировщик ПО" FontSize="18"/>
+        </ComboBox>
+        <Button x:Name="addEmployeeButton" Content="Нанять" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="171,321,0,0" Height="35" FontSize="20" FontFamily="Segoe UI Semibold" Click="AddEmployeeButton_Click"/>
+
+    </Grid>
+</Window>
